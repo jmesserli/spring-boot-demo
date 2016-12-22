@@ -1,6 +1,6 @@
 package nu.peg.demo.controller
 
-import nu.peg.demo.data.transfer.Transfer
+import nu.peg.demo.data.transfer.TransferDto
 import nu.peg.demo.transfer.TransferService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
@@ -18,7 +18,6 @@ class TransferController @Autowired constructor(val transferService: TransferSer
             transferService.transfer(fromId, toId, amount)
 
     @GetMapping("")
-    fun findAllTransfers(): List<Transfer> =
+    fun findAllTransfers(): List<TransferDto> =
             transferService.findAll()
-
 }

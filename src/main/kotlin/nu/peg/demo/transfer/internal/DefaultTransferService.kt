@@ -3,6 +3,8 @@ package nu.peg.demo.transfer.internal
 import nu.peg.demo.data.account.Account
 import nu.peg.demo.data.account.AccountRepository
 import nu.peg.demo.data.transfer.Transfer
+import nu.peg.demo.data.transfer.TransferDto
+import nu.peg.demo.data.transfer.TransferDtoMapper
 import nu.peg.demo.data.transfer.TransferRepository
 import nu.peg.demo.transfer.TransferService
 import org.springframework.beans.factory.annotation.Autowired
@@ -11,7 +13,8 @@ import java.util.*
 
 @Service
 class DefaultTransferService @Autowired constructor(val transferRepository: TransferRepository,
-                                                    val accountRepository: AccountRepository) : TransferService {
+                                                    val accountRepository: AccountRepository,
+                                                    val transferDtoMapper: TransferDtoMapper) : TransferService {
     override fun transfer(sourceId: Long, targetId: Long, amount: Double): UUID? {
         val source = accountRepository.findOne(sourceId)
         val target = accountRepository.findOne(targetId)
@@ -41,7 +44,7 @@ class DefaultTransferService @Autowired constructor(val transferRepository: Tran
         return transferRepository.save(transfer).confirmationId
     }
 
-    override fun findAll(): List<Transfer> {
-        return transferRepository.findAll().toList();
+    override fun findAll(): List<TransferDto> {
+        return transferRepository.findAll().map { transferDtoMapper.toDto(it) }
     }
 }

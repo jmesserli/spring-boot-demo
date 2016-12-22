@@ -2,6 +2,7 @@ package nu.peg.demo.transfer
 
 import nu.peg.demo.data.account.Account
 import nu.peg.demo.data.transfer.Transfer
+import nu.peg.demo.data.transfer.TransferDto
 import java.util.*
 
 interface TransferService {
@@ -23,5 +24,5 @@ interface TransferService {
     /**
      * Retrieve a list of processed transfers
      */
-    fun findAll(): List<Transfer>
+    fun findAll(): List<TransferDto>
 }
