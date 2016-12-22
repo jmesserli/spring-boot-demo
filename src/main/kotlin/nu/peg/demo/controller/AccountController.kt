@@ -1,6 +1,6 @@
 package nu.peg.demo.controller
 
-import nu.peg.demo.account.AccountService
+import nu.peg.demo.service.account.AccountService
 import nu.peg.demo.data.account.Account
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping

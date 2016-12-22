@@ -38,6 +38,7 @@ buildInfo {
 }
 
 dependencies {
+    compile 'org.aspectj:aspectjweaver'
     compile 'org.springframework.boot:spring-boot-starter-hateoas'
     compile 'org.webjars:hal-browser'
     compile('org.springframework.boot:spring-boot-actuator-docs')

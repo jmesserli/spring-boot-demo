@@ -1,4 +1,4 @@
-package nu.peg.demo.transfer
+package nu.peg.demo.service.transfer
 
 import nu.peg.demo.data.account.Account
 import nu.peg.demo.data.transfer.Transfer

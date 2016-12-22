@@ -1,6 +1,6 @@
 package nu.peg.demo.info
 
-import nu.peg.demo.account.AccountService
+import nu.peg.demo.service.account.AccountService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.actuate.info.Info
 import org.springframework.boot.actuate.info.InfoContributor

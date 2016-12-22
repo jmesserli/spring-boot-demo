@@ -1,4 +1,4 @@
-package nu.peg.demo.account
+package nu.peg.demo.service.account
 
 import nu.peg.demo.data.account.Account
 

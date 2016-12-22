@@ -1,7 +1,7 @@
-package nu.peg.demo.transfer.internal
+package nu.peg.demo.service.transfer.internal
 
 import com.google.common.truth.Truth.assertThat
-import nu.peg.demo.account.AccountService
+import nu.peg.demo.service.account.AccountService
 import nu.peg.demo.data.account.Account
 import nu.peg.demo.data.account.AccountRepository
 import nu.peg.demo.data.transfer.TransferDtoMapper

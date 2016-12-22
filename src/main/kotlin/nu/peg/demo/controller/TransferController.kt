@@ -1,7 +1,7 @@
 package nu.peg.demo.controller
 
 import nu.peg.demo.data.transfer.TransferDto
-import nu.peg.demo.transfer.TransferService
+import nu.peg.demo.service.transfer.TransferService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable

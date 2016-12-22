@@ -1,4 +1,4 @@
-package nu.peg.demo.transfer.internal
+package nu.peg.demo.service.transfer.internal
 
 import nu.peg.demo.data.account.Account
 import nu.peg.demo.data.account.AccountRepository
@@ -6,7 +6,7 @@ import nu.peg.demo.data.transfer.Transfer
 import nu.peg.demo.data.transfer.TransferDto
 import nu.peg.demo.data.transfer.TransferDtoMapper
 import nu.peg.demo.data.transfer.TransferRepository
-import nu.peg.demo.transfer.TransferService
+import nu.peg.demo.service.transfer.TransferService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import java.util.*

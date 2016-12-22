@@ -1,6 +1,6 @@
-package nu.peg.demo.account.internal
+package nu.peg.demo.service.account
 
-import nu.peg.demo.account.AccountService
+import nu.peg.demo.service.account.AccountService
 import nu.peg.demo.data.account.Account
 import nu.peg.demo.data.account.AccountRepository
 import org.springframework.beans.factory.annotation.Autowired
