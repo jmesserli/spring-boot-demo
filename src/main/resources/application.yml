@@ -2,8 +2,3 @@ spring:
   h2:
     console:
       enabled: true
-
-security:
-  user:
-    name: joel
-    password: helloworld
