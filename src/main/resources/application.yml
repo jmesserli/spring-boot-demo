@@ -2,6 +2,10 @@ spring:
   h2:
     console:
       enabled: true
+
+  session:
+    store-type: jdbc
+
 security:
   user:
     name: joel
