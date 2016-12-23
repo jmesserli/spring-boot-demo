@@ -19,7 +19,7 @@ class AccountControllerTest {
 
     @Test
     fun findAllAccounts() {
-        val accountsEntity = restTemplate.withBasicAuth("joel", "helloworld").getForEntity("/api/account", Array<Account>::class.java)
+        val accountsEntity = restTemplate.withBasicAuth("joel", "joel").getForEntity("/api/account", Array<Account>::class.java)
         assertThat(accountsEntity.statusCode).isEqualTo(HttpStatus.OK)
 
         val accounts = accountsEntity.body

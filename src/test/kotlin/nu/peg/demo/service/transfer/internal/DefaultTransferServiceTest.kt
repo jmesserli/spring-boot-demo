@@ -1,13 +1,10 @@
 package nu.peg.demo.service.transfer.internal
 
 import com.google.common.truth.Truth.assertThat
-import nu.peg.demo.service.account.AccountService
 import nu.peg.demo.data.account.Account
 import nu.peg.demo.data.account.AccountRepository
-import nu.peg.demo.data.transfer.TransferDtoMapper
-import org.junit.After
+import nu.peg.demo.service.account.AccountService
 import org.junit.Before
-import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.springframework.beans.factory.annotation.Autowired
@@ -18,12 +15,10 @@ import javax.transaction.Transactional
 @SpringBootTest
 @RunWith(SpringRunner::class)
 @Transactional
-@Ignore
-class DefaultTransferServiceTest {
+open class DefaultTransferServiceTest {
     @Autowired lateinit var accountService: AccountService
     @Autowired lateinit var accountRepository: AccountRepository
     @Autowired lateinit var transferService: DefaultTransferService
-    @Autowired lateinit var transferDtoMapper: TransferDtoMapper
 
     lateinit var accounts: MutableList<Account>
 
@@ -34,11 +29,6 @@ class DefaultTransferServiceTest {
         account1 = accountService.loadAccount(account1.id!!, 1000.0)!!
         accounts.add(account1)
         accounts.add(accountService.createAccount())
-    }
-
-    @After
-    fun tearDown() {
-
     }
 
     @Test
@@ -62,5 +52,4 @@ class DefaultTransferServiceTest {
         val findAll = transferService.findAll()
         assertThat(findAll).isEmpty()
     }
-
 }
